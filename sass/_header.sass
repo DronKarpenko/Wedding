@@ -1,0 +1,101 @@
+header
+	.header-top
+		background-color: $main-bgc
+		background: linear-gradient(to right, $main-bgc 0%, lighten($main-bgc, 15%) 50%, $main-bgc 100%)
+		height: 80px
+		color: #fff
+		.container
+			justify-content: space-between
+			align-items: center
+			position: relative
+			height: 100%
+			padding: 0 10px
+			.logo
+				height: 80px
+				fill: #fff
+			.header-nav
+				display: flex
+				justify-content: space-between
+				align-items: center
+				position: relative
+				.header-nav__list
+					position: absolute
+					display: none
+					width: 200px
+					top: 65px
+					z-index: 1
+					li
+						border-bottom: 1px solid $main-bgc
+						transition: all linear .2s
+						background-color: #fff
+						.header-nav__link
+							display: block
+							padding: 15px 20px
+							font-size: 18px
+							width: 100%
+							color: $main-bgc
+						&:hover
+							background-color: $main-bgc
+							.header-nav__link
+								color: #fff
+				.sandwich
+					position: relative
+					height: 50px
+					width: 50px
+					border: 2px solid #fff
+					border-radius: 50%
+					margin-right: 15px
+					cursor: pointer
+					&.active
+						.sandwich-line_top
+							top: 22px
+							left: 13px
+							transform: rotate(45deg)
+						.sandwich-line_middle
+							opacity: 0
+						.sandwich-line_bottom
+							top: 22px
+							left: 13px
+							transform: rotate(-45deg)	
+					span
+						height: 4px
+						background-color: #fff
+						width: 25px
+						display: block
+						position: absolute
+						left: 50%
+						transform: translateX(-50%)
+						transition: all linear .4s
+					.sandwich-line_top
+						top: 15px
+					.sandwich-line_middle
+						top: 23px
+						opacity: 1
+					.sandwich-line_bottom
+						top: 31px
+				p
+					cursor: pointer
+			.header-about
+				font-size: 16px
+				.name
+					font-weight: 700
+					text-transform: uppercase
+					margin-bottom: 4px
+			.header-phone
+				font-weight: 700
+				position: relative
+				svg
+					position: absolute
+					left: -27px
+					top: 50%
+					transform: translateY(-50%)
+				a
+					display: block
+					color: #fff
+				.first-number
+					margin-bottom: 7px
+			.callback
+				transition: all linear .3s
+				&:hover
+					background-color: #fff
+					color: $main-bgc
